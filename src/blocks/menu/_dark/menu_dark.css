@@ -1,0 +1,4 @@
+.menu_dark {
+  background-color: rgba(32, 32, 32, .8);
+  transition: all 1s ease;
+}

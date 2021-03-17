@@ -1,5 +1,9 @@
 .menu__container {
-  width: 40%;
+  width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border-bottom: 1px solid red;
+  padding: 20px 0;
 }

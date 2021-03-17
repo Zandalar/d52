@@ -1,8 +1,10 @@
 import React from 'react';
 import video1 from '../videos/promo_h264.mp4';
 import video2 from '../videos/promo_webm.webm';
+import arrow from '../images/arrow-down.svg';
 
-function Header() {
+function Header({height}) {
+
   return (
     <div className='header'>
       <video
@@ -18,6 +20,7 @@ function Header() {
         <source src={video1} type="video/mp4" />
         <source src={video2} type="video/webm" />
       </video>
+      {height < 150 && <img className='header__arrow' src={arrow} alt='arrow-down'/>}
     </div>
   )
 }

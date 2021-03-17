@@ -1,4 +1,5 @@
 @import url(./__video/header__video.css);
+@import url(./__arrow/header__arrow.css);
 
 .header {
   width: 100%;
@@ -6,4 +7,5 @@
   display: flex;
   background: url(../../videos/daisy-stock-poster.jpg) no-repeat #94a233;
   background-size: cover;
+  z-index: -1;
 }
