@@ -5,3 +5,21 @@
   line-height: 22px;
   text-decoration: none;
 }
+
+.menu__link:after {
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: red;
+  content: "";
+  transition: all 0.3s ease-out;
+}
+
+.menu__link:hover:after {
+  width: 100%;
+}
+
+.menu__link:hover {
+  color: red;
+  transition: all 0.3s ease-out;
+}

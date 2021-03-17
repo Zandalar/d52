@@ -1,6 +1,6 @@
 import React from 'react';
-import video1 from '../videos/promo_h264.mp4';
-import video2 from '../videos/promo_webm.webm';
+import video1 from '../videos/Promo.mp4';
+import video2 from '../videos/Promo.webm';
 import arrow from '../images/arrow-down.svg';
 
 function Header({height}) {
