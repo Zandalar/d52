@@ -1,9 +1,0 @@
-.menu__container {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: none;
-  border-bottom: 1px solid red;
-  padding: 20px 0;
-}
