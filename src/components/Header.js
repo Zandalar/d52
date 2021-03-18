@@ -15,7 +15,7 @@ function Header({height}) {
         autoPlay
         muted
         loop='loop'
-        poster='../videos/daisy-stock-poster.jpg'
+        poster='../images/bg_honda.jpg'
       >
         <source src={video1} type="video/mp4" />
         <source src={video2} type="video/webm" />

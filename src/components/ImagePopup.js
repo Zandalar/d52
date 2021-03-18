@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../images/bg_honda.jpg'
+import image from '../images/test_honda.jpg'
 
 function ImagePopup({ name, data, onClose, isOpen, isolatePopup }) {
   return (

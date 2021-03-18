@@ -5,7 +5,7 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  background: url(../../videos/daisy-stock-poster.jpg) no-repeat #94a233;
+  background: url(../../images/bg_honda.jpg) no-repeat #94a233;
   background-size: cover;
   z-index: -1;
 }

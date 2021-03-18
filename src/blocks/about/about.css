@@ -1,0 +1,20 @@
+@import url(./__title/about__title.css);
+@import url(./__text/about__text.css);
+@import url(./__subtitle/about__subtitle.css);
+@import url(./__service/about__service.css);
+@import url(./__service-container/about__service-container.css);
+@import url(./__image/about__image.css);
+@import url(./__description/about__description.css);
+@import url(./__photo/about__photo.css);
+@import url(./__masters/about__masters.css);
+@import url(./__masters-container/about__masters-container.css);
+@import url(./__card/about__card.css);
+@import url(./__name/about__name.css);
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #202020;
+}

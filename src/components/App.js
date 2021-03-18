@@ -1,11 +1,12 @@
 import React from 'react';
 import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom';
-import Menu from './Menu';
-import Header from './Header';
-import Activities from './Activities';
-import Gallery from './Gallery';
-import Footer from './Footer';
 import ImagePopup from './ImagePopup';
+import Main from './Main';
+import About from './About';
+import Detailing from './Detailing';
+import Service from './Service';
+import Price from './Price';
+import Contacts from './Contacts';
 
 function App() {
   const [height, setHeight] = React.useState(0);
@@ -50,11 +51,22 @@ function App() {
     <div className="app">
       <Switch>
         <Route exact path='/'>
-          <Menu height={height} />
-          <Header height={height} />
-          <Activities />
-          <Gallery onCardClick={handleCardClick}/>
-          <Footer />
+         <Main height={height} handleCardClick={handleCardClick} location={location} />
+        </Route>
+        <Route exact path='/about'>
+          <About height={height} location={location} />
+        </Route>
+        <Route exact path='/detailing'>
+          <Detailing height={height} location={location} />
+        </Route>
+        <Route exact path='/service'>
+          <Service height={height} location={location} />
+        </Route>
+        <Route exact path='/price'>
+          <Price height={height} location={location} />
+        </Route>
+        <Route exact path='/contacts'>
+          <Contacts height={height} location={location} />
         </Route>
       </Switch>
       <ImagePopup
