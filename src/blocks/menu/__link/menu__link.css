@@ -1,0 +1,32 @@
+.menu__link {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.menu__link:after {
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: red;
+  content: "";
+  transition: all 0.3s ease-out;
+}
+
+.menu__link:hover:after {
+  width: 100%;
+}
+
+.menu__link:hover {
+  color: red;
+  transition: all 0.3s ease-out;
+}
+
+@media all and (max-width: 1000px) {
+  .menu__link {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}

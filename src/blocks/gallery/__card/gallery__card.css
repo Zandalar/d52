@@ -1,0 +1,8 @@
+.gallery__card {
+  width: 250px;
+  height: 250px;
+  background-image: url(../../../images/test_honda.jpg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
