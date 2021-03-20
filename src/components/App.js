@@ -39,13 +39,20 @@ function App() {
   }
 
   React.useEffect(() => {
-    document.addEventListener('scroll', updateHeight);
+    setTimeout(() => {
+      document.addEventListener('scroll', updateHeight);
+    }, 3000)
+
     window.addEventListener('keydown', handleEscClick);
     return () => {
       document.addEventListener('scroll', updateHeight);
       window.addEventListener('keydown', handleEscClick);
     }
   })
+
+  React.useEffect(() => {
+    history.push('/')
+  },[])
 
   return (
     <div className="app">

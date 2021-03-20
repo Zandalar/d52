@@ -12,22 +12,22 @@ function About({height, location}) {
         <ul className='about__masters-container'>
           <li className='about__card'>
             <img className='about__photo' src={image} alt='Фото мастера' />
-            <h3 className='about__name'>ФИО мастера</h3>
+            <h3 className='about__name'>ФИО сотрудника</h3>
             <p className='about__text'>Несколько слов о себе</p>
           </li>
           <li className='about__card'>
             <img className='about__photo' src={image} alt='Фото мастера' />
-            <h3 className='about__name'>ФИО мастера</h3>
+            <h3 className='about__name'>ФИО сотрудника</h3>
             <p className='about__text'>Несколько слов о себе</p>
           </li>
           <li className='about__card'>
             <img className='about__photo' src={image} alt='Фото мастера' />
-            <h3 className='about__name'>ФИО мастера</h3>
+            <h3 className='about__name'>ФИО сотрудника</h3>
             <p className='about__text'>Несколько слов о себе</p>
           </li>
           <li className='about__card'>
             <img className='about__photo' src={image} alt='Фото мастера' />
-            <h3 className='about__name'>ФИО мастера</h3>
+            <h3 className='about__name'>ФИО сотрудника</h3>
             <p className='about__text'>Несколько слов о себе</p>
           </li>
         </ul>
