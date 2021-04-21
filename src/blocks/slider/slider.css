@@ -1,0 +1,14 @@
+@import url(./__image/slider__image.css);
+@import url(./__item/slider__item.css);
+@import url(./__item/_next/slider__item_next.css);
+@import url(./__item/_previous/slider__item_previous.css);
+
+.slider {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 50px;
+}

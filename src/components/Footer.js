@@ -24,7 +24,7 @@ function Footer() {
         <p className='footer__developer'>Vitaliy Masich</p>
       </div>
     </footer>
-  )
+  );
 }
 
 export default Footer;

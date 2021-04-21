@@ -1,5 +1,10 @@
-import React from 'react';
-import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import {
+  Route,
+  Switch,
+  useHistory,
+  useLocation,
+} from 'react-router-dom';
 import ImagePopup from './ImagePopup';
 import Main from './Main';
 import About from './About';
@@ -9,14 +14,18 @@ import Price from './Price';
 import Contacts from './Contacts';
 
 function App() {
-  const [height, setHeight] = React.useState(0);
-  const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
+  const [height, setHeight] = useState(0);
+  const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
 
   const location = useLocation().pathname;
   const history = useHistory();
 
   function updateHeight() {
     setHeight(window.pageYOffset);
+  }
+
+  function closeAllPopups() {
+    setIsImagePopupOpen(false);
   }
 
   function handleCardClick() {
@@ -33,26 +42,21 @@ function App() {
     evt.stopPropagation();
   }
 
-  function closeAllPopups() {
-    setIsImagePopupOpen(false);
-    console.log(isImagePopupOpen);
-  }
-
   React.useEffect(() => {
     setTimeout(() => {
       document.addEventListener('scroll', updateHeight);
-    }, 3000)
+    }, 3000);
 
     window.addEventListener('keydown', handleEscClick);
     return () => {
       document.addEventListener('scroll', updateHeight);
       window.addEventListener('keydown', handleEscClick);
-    }
-  })
+    };
+  });
 
   React.useEffect(() => {
-    history.push('/')
-  },[])
+    history.push('/');
+  }, []);
 
   return (
     <div className="app">

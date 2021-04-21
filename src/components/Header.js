@@ -3,8 +3,7 @@ import video1 from '../videos/Promo.mp4';
 import video2 from '../videos/Promo.webm';
 import arrow from '../images/arrow-down.svg';
 
-function Header({height}) {
-
+function Header({ height }) {
   return (
     <div className='header'>
       <video
@@ -22,7 +21,7 @@ function Header({height}) {
       </video>
       {height < 150 && <img className='header__arrow' src={arrow} alt='arrow-down'/>}
     </div>
-  )
+  );
 }
 
 export default Header;

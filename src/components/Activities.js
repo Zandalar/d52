@@ -26,7 +26,7 @@ function Activities() {
         </li>
       </ul>
     </section>
-  )
+  );
 }
 
 export default Activities;
