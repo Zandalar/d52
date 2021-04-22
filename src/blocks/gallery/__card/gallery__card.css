@@ -5,4 +5,5 @@
   background-position: center;
   background-size: cover;
   cursor: pointer;
+  border: 1px solid darkred;
 }

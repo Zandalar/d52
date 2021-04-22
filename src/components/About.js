@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Menu from './Menu';
 import image from '../images/bg_honda.jpg';
 import Footer from './Footer';
 
 function About({ height, location }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='about'>
       <Menu height={height} location={location} />

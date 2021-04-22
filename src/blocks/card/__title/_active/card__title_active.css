@@ -1,0 +1,4 @@
+.card__title_active {
+  transform: translate(0);
+  transition: all ease .5s;
+}

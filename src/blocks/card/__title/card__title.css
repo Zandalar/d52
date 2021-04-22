@@ -1,6 +1,10 @@
 .card__title {
+  width: 100%;
   color: #fff;
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
+  transform: translate(100%);
+  transition: all ease .5s;
+  text-align: center;
 }

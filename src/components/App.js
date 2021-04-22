@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Route,
   Switch,
@@ -42,20 +42,20 @@ function App() {
     evt.stopPropagation();
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       document.addEventListener('scroll', updateHeight);
-    }, 3000);
-
+    }, 1000);
     window.addEventListener('keydown', handleEscClick);
     return () => {
-      document.addEventListener('scroll', updateHeight);
-      window.addEventListener('keydown', handleEscClick);
+      document.removeEventListener('scroll', updateHeight);
+      window.removeEventListener('keydown', handleEscClick);
     };
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     history.push('/');
+    window.scrollTo(0, 0);
   }, []);
 
   return (

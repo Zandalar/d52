@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import slide1 from '../images/logo_1.jpg';
-import slide2 from '../images/bg_honda.jpg';
-import slide3 from '../images/bg_metall.jpg';
-import slide4 from '../images/test_honda.jpg';
-import slide5 from '../images/bg_red.jpg';
+import slide1 from '../images/slider1.jpg';
+import slide2 from '../images/slider2.jpg';
+import slide3 from '../images/slider3.jpg';
+import slide4 from '../images/slider4.jpg';
+import slide5 from '../images/slider5.jpg';
 
 function Slider() {
   const img = [
