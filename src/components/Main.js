@@ -5,14 +5,19 @@ import Activities from './Activities';
 import Gallery from './Gallery';
 import Footer from './Footer';
 
-function Main({ height, handleCardClick, location }) {
+function Main({
+  height,
+  handleCardClick,
+  handleMessagePopupClick,
+  location,
+}) {
   return (
     <>
       <Menu height={height} location={location} />
       <Header height={height} />
       <Activities />
       <Gallery onCardClick={handleCardClick}/>
-      <Footer />
+      <Footer handleMessagePopupClick={handleMessagePopupClick} />
     </>
   );
 }

@@ -2,74 +2,76 @@ import React, { useEffect, useRef } from 'react';
 import useValidator from '../hooks/useValidator';
 
 function Popup({ isOpen, onClose, isolatePopup }) {
-  const { values, errors, isValid, handleChange } = useValidator();
-  const focus = React.useRef();
+  const {
+    values,
+    errors,
+    isValid,
+    handleChange,
+  } = useValidator();
+  const focus = useRef();
 
   useEffect(() => {
-    setTimeout(() => { focus.current.focus() }, 100)
+    setTimeout(() => (focus.current.focus()), 100);
   }, [isOpen]);
 
-  useEffect(() => {
-    values.name = currentUser.name;
-    values.about = currentUser.about;
-  }, [currentUser]);
-
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    onUpdateUser({
-      name: values.name,
-      about: values.about,
-    });
-  }
+  // function handleSubmit(evt) {
+  //   evt.preventDefault();
+  //   onUpdateUser({
+  //     name: values.email,
+  //     message: values.message,
+  //   });
+  // }
 
   return (
     <div className={`popup ${isOpen && 'popup_opened'}`} id='popup__info' onClick={onClose}>
-      <div className='popup__container' onClick={isolatePopup}>
+      <div className='popup__container popup__container_message' onClick={isolatePopup}>
         <button className='popup__button-close' id='info__button-close' type='button' onClick={onClose} />
-        <form className='popup__form' name={name} onSubmit={onSubmit} noValidate>
+        <form className='popup__form' name='messageForm' noValidate>
           <input
             ref={focus}
             className='popup__field'
-            id='profile__name'
-            name='name'
-            type='text'
-            value={values.name || ''}
+            id='popup__email'
+            name='email'
+            type='email'
+            value={values.email || ''}
             minLength='2'
             maxLength='40'
             onChange={handleChange}
+            placeholder='Введите свой e-mail'
             required
           />
           <span
             className='popup__field-error'
-            id='profile__name-error'>
-        {errors.name || ''}
-      </span>
-          <input
-            className='popup__field'
-            id='profile__description'
-            name='about'
-            type='text'
-            value={values.about || ''}
+            id='email-error'
+          >
+            {errors.email || ''}
+          </span>
+          <textarea
+            className='popup__field popup__field_area'
+            id='popup__message'
+            name='message'
+            value={values.message || ''}
             minLength='2'
-            maxLength='200'
             onChange={handleChange}
+            placeholder='Оставьте свое сообщение'
             required
           />
           <span
             className='popup__field-error'
-            id='profile__description-error'>
-        {errors.about || ''}
-      </span>
+            id='message-error'
+          >
+            {errors.message || ''}
+          </span>
           <button
             className={`popup__button-save ${!isValid && 'popup__button-save_disabled'}`}
             id='profile__button-save'
             type='submit'>
-            {`${isLoading ? 'Сохранение...' : 'Сохранить'}`}
+            Отправить
           </button>
         </form>
       </div>
     </div>
-  )
+  );
 }
 
 export default Popup;

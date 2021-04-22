@@ -1,0 +1,12 @@
+.popup__container_message {
+  width: 430px;
+  background-color: #202020;
+  padding: 36px;
+}
+
+@media all and (max-width: 600px) {
+  .popup__container_message {
+    width: 87.5%;
+    padding: 30px 20px;
+  }
+}

@@ -12,10 +12,12 @@ import Detailing from './Detailing';
 import Service from './Service';
 import Price from './Price';
 import Contacts from './Contacts';
+import Popup from './Popup';
 
 function App() {
   const [height, setHeight] = useState(0);
   const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
+  const [isMessagePopupOpen, setIsMessagePopupOpen] = useState(false);
 
   const location = useLocation().pathname;
   const history = useHistory();
@@ -26,10 +28,15 @@ function App() {
 
   function closeAllPopups() {
     setIsImagePopupOpen(false);
+    setIsMessagePopupOpen(false);
   }
 
   function handleCardClick() {
     setIsImagePopupOpen(true);
+  }
+
+  function handleMessagePopupClick() {
+    setIsMessagePopupOpen(true);
   }
 
   function handleEscClick(evt) {
@@ -62,7 +69,12 @@ function App() {
     <div className="app">
       <Switch>
         <Route exact path='/'>
-         <Main height={height} handleCardClick={handleCardClick} location={location} />
+         <Main
+           height={height}
+           handleCardClick={handleCardClick}
+           handleMessagePopupClick={handleMessagePopupClick}
+           location={location}
+         />
         </Route>
         <Route exact path='/about'>
           <About height={height} location={location} />
@@ -84,6 +96,11 @@ function App() {
         name='image'
         onClose={closeAllPopups}
         isOpen={isImagePopupOpen}
+        isolatePopup={isolatePopup}
+      />
+      <Popup
+        onClose={closeAllPopups}
+        isOpen={isMessagePopupOpen}
         isolatePopup={isolatePopup}
       />
     </div>

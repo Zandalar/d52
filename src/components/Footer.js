@@ -2,11 +2,11 @@ import React from 'react';
 import vk from '../images/vk.svg';
 import instagram from '../images/instagram.svg';
 
-function Footer() {
+function Footer({ handleMessagePopupClick }) {
   return (
     <footer className='footer'>
       <h2 className='footer__title'>Возникли вопросы? Напишите нам и мы с Вами свяжемся!</h2>
-      <button className='footer__button' type='button'>Написать сообщение</button>
+      <button className='footer__button' type='button' onClick={handleMessagePopupClick}>Написать сообщение</button>
       <ul className='footer__social-list'>
         <li className='footer__social-item'>
           <a className='footer__social-link' href='https://vk.com/d52service' target='_blank'>
