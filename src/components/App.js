@@ -77,7 +77,11 @@ function App() {
          />
         </Route>
         <Route exact path='/about'>
-          <About height={height} location={location} />
+          <About
+            height={height}
+            location={location}
+            handleMessagePopupClick={handleMessagePopupClick}
+          />
         </Route>
         <Route exact path='/detailing'>
           <Detailing height={height} location={location} />

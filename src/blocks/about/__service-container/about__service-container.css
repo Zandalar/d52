@@ -2,3 +2,9 @@
   width: 80%;
   display: flex;
 }
+
+@media all and (max-width: 1440px) {
+  .about__service-container {
+    flex-direction: column;
+  }
+}

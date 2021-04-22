@@ -1,0 +1,12 @@
+.accordion__item {
+  flex: 1;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: flex 0.8s ease;
+}
+
+.accordion__item:hover {
+  flex: 7;
+}

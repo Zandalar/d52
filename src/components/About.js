@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import Menu from './Menu';
 import image from '../images/bg_honda.jpg';
 import Footer from './Footer';
+import Accordion from './Accordion';
 
-function About({ height, location }) {
+function About({ height, location, handleMessagePopupClick }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -62,7 +63,8 @@ function About({ height, location }) {
               становилась все ближе, сердце билось все чаще!
             </p>
             <p className='about__text'>
-              12 мая 2015 года на ул. Дорожной 52 сервис открыл двери первому клиенту.
+              12 мая 2015 года на ул. Дорожной 52 сервис
+              открыл двери первому клиенту.
               Тогда мы ремонтировали Civic 4d, обучали дроссель.
             </p>
             <p className='about__text'>
@@ -94,10 +96,10 @@ function About({ height, location }) {
               но о нем есть отдельный пост.
             </p>
           </div>
-          <img className='about__image' src={image} alt='Фото сервиса' />
+          <Accordion />
         </div>
       </section>
-      <Footer />
+      <Footer handleMessagePopupClick={handleMessagePopupClick} />
     </div>
   );
 }

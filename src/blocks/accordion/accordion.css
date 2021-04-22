@@ -1,0 +1,20 @@
+@import url(./__item/accordion__item.css);
+@import url(./__item/_1/accordion__item_1.css);
+@import url(./__item/_2/accordion__item_2.css);
+@import url(./__item/_3/accordion__item_3.css);
+@import url(./__item/_4/accordion__item_4.css);
+@import url(./__item/_5/accordion__item_5.css);
+
+.accordion {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  min-height: 100%;
+}
+
+@media all and (max-width: 1440px) {
+  .accordion {
+    min-height: 70vh;
+    width: 100%;
+  }
+}

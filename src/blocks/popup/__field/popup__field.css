@@ -21,6 +21,10 @@
   color: gray;
 }
 
+.popup__field:focus {
+  border: 1px solid darkred;
+}
+
 @media all and (max-width: 600px) {
   .popup__field {
     margin: 20px 0 0;
