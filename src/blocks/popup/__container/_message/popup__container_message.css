@@ -2,6 +2,7 @@
   width: 630px;
   background-color: #202020;
   padding: 36px;
+  box-shadow: 5px 5px 40px red, -5px -5px 40px darkred;
 }
 
 @media all and (max-width: 600px) {

@@ -30,6 +30,24 @@ function Popup({ isOpen, onClose, isolatePopup }) {
           <input
             ref={focus}
             className='popup__field'
+            id='popup__name'
+            name='name'
+            type='text'
+            value={values.name || ''}
+            minLength='2'
+            maxLength='100'
+            onChange={handleChange}
+            placeholder='Как Вас зовут?'
+            required
+          />
+          <span
+            className='popup__field-error'
+            id='name-error'
+          >
+            {errors.name || ''}
+          </span>
+          <input
+            className='popup__field'
             id='popup__email'
             name='email'
             type='email'
@@ -45,6 +63,24 @@ function Popup({ isOpen, onClose, isolatePopup }) {
             id='email-error'
           >
             {errors.email || ''}
+          </span>
+          <input
+            className='popup__field'
+            id='popup__phone'
+            name='phone'
+            type='tel'
+            value={values.phone || ''}
+            minLength='5'
+            maxLength='20'
+            onChange={handleChange}
+            placeholder='Номер телефона'
+            required
+          />
+          <span
+            className='popup__field-error'
+            id='phone-error'
+          >
+            {errors.phone || ''}
           </span>
           <textarea
             className='popup__field popup__field_area'
