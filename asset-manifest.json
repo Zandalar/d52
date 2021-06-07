@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "./static/css/main.5379acb0.chunk.css",
-    "main.js": "./static/js/main.6ebcdec8.chunk.js",
-    "main.js.map": "./static/js/main.6ebcdec8.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.09e2d357.js",
-    "runtime-main.js.map": "./static/js/runtime-main.09e2d357.js.map",
-    "static/js/2.a2fd91b0.chunk.js": "./static/js/2.a2fd91b0.chunk.js",
-    "static/js/2.a2fd91b0.chunk.js.map": "./static/js/2.a2fd91b0.chunk.js.map",
-    "static/js/3.95a84f93.chunk.js": "./static/js/3.95a84f93.chunk.js",
-    "static/js/3.95a84f93.chunk.js.map": "./static/js/3.95a84f93.chunk.js.map",
-    "index.html": "./index.html",
-    "static/css/main.5379acb0.chunk.css.map": "./static/css/main.5379acb0.chunk.css.map",
-    "static/js/2.a2fd91b0.chunk.js.LICENSE.txt": "./static/js/2.a2fd91b0.chunk.js.LICENSE.txt",
-    "static/media/index.css": "./static/media/test_honda.8b31dd7a.jpg",
-    "static/media/Promo.67d8ec0c.webm": "./static/media/Promo.67d8ec0c.webm",
-    "static/media/Promo.d9cf1b67.mp4": "./static/media/Promo.d9cf1b67.mp4",
-    "static/media/arrow-down.725c4b07.svg": "./static/media/arrow-down.725c4b07.svg",
-    "static/media/instagram.5c5a99bb.svg": "./static/media/instagram.5c5a99bb.svg",
-    "static/media/vk.035d9e72.svg": "./static/media/vk.035d9e72.svg"
+    "main.css": "/d52/static/css/main.de2ff951.chunk.css",
+    "main.js": "/d52/static/js/main.6ebcdec8.chunk.js",
+    "main.js.map": "/d52/static/js/main.6ebcdec8.chunk.js.map",
+    "runtime-main.js": "/d52/static/js/runtime-main.88452bc9.js",
+    "runtime-main.js.map": "/d52/static/js/runtime-main.88452bc9.js.map",
+    "static/js/2.a2fd91b0.chunk.js": "/d52/static/js/2.a2fd91b0.chunk.js",
+    "static/js/2.a2fd91b0.chunk.js.map": "/d52/static/js/2.a2fd91b0.chunk.js.map",
+    "static/js/3.95a84f93.chunk.js": "/d52/static/js/3.95a84f93.chunk.js",
+    "static/js/3.95a84f93.chunk.js.map": "/d52/static/js/3.95a84f93.chunk.js.map",
+    "index.html": "/d52/index.html",
+    "static/css/main.de2ff951.chunk.css.map": "/d52/static/css/main.de2ff951.chunk.css.map",
+    "static/js/2.a2fd91b0.chunk.js.LICENSE.txt": "/d52/static/js/2.a2fd91b0.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/d52/static/media/test_honda.8b31dd7a.jpg",
+    "static/media/Promo.67d8ec0c.webm": "/d52/static/media/Promo.67d8ec0c.webm",
+    "static/media/Promo.d9cf1b67.mp4": "/d52/static/media/Promo.d9cf1b67.mp4",
+    "static/media/arrow-down.725c4b07.svg": "/d52/static/media/arrow-down.725c4b07.svg",
+    "static/media/instagram.5c5a99bb.svg": "/d52/static/media/instagram.5c5a99bb.svg",
+    "static/media/vk.035d9e72.svg": "/d52/static/media/vk.035d9e72.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.09e2d357.js",
+    "static/js/runtime-main.88452bc9.js",
     "static/js/2.a2fd91b0.chunk.js",
-    "static/css/main.5379acb0.chunk.css",
+    "static/css/main.de2ff951.chunk.css",
     "static/js/main.6ebcdec8.chunk.js"
   ]
 }
