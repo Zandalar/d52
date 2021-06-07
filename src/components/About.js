@@ -4,14 +4,14 @@ import Footer from './Footer';
 import Accordion from './Accordion';
 import Navigation from './Navigation';
 
-function About({ height, handleMessagePopupClick }) {
+function About({ height, handleMessagePopupClick, windowWidth }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className='about'>
-      <Navigation height={height} />
+      <Navigation height={height} windowWidth={windowWidth} />
       <section className='about__masters'>
         <h1 className='about__title'>Наши герои</h1>
         <ul className='about__masters-container'>

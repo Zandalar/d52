@@ -63,7 +63,7 @@ function App() {
   useEffect(() => {
     history.push('/');
     window.scrollTo(0, 0);
-  }, []);
+  }, [history]);
 
   return (
     <div className="app">
@@ -80,6 +80,7 @@ function App() {
           <About
             height={height}
             handleMessagePopupClick={handleMessagePopupClick}
+            windowWidth={windowWidth}
           />
         </Route>
         <Route exact path='/detailing'>
