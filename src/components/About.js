@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import image from '../images/bg_honda.jpg';
 import Footer from './Footer';
 import Accordion from './Accordion';
 import Navigation from './Navigation';
 
 function About({ height, handleMessagePopupClick }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='about'>
       <Navigation height={height} />

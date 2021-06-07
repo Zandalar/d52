@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './Header';
 import Activities from './Activities';
 import Gallery from './Gallery';
@@ -11,6 +11,10 @@ function Main({
   handleMessagePopupClick,
   windowWidth,
 }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navigation height={height} windowWidth={windowWidth} />

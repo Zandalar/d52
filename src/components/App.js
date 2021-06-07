@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 import ImagePopup from './ImagePopup';
 import Main from './Main';
 import About from './About';
@@ -16,7 +16,7 @@ function App() {
   const [isMessagePopupOpen, setIsMessagePopupOpen] = useState(false);
 
   // const location = useLocation().pathname;
-  // const history = useHistory();
+  const history = useHistory();
 
   function updateHeight() {
     setHeight(window.pageYOffset);
@@ -60,10 +60,10 @@ function App() {
     };
   });
 
-  // useEffect(() => {
-  //   history.push('/');
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    history.push('/');
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="app">
