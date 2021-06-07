@@ -5,10 +5,15 @@ import Gallery from './Gallery';
 import Footer from './Footer';
 import Navigation from './Navigation';
 
-function Main({ height, handleCardClick, handleMessagePopupClick }) {
+function Main({
+  height,
+  handleCardClick,
+  handleMessagePopupClick,
+  windowWidth,
+}) {
   return (
     <>
-      <Navigation height={height} />
+      <Navigation height={height} windowWidth={windowWidth} />
       <Header height={height} />
       <Activities />
       <Gallery onCardClick={handleCardClick}/>

@@ -1,10 +1,10 @@
 import React from 'react';
-import Menu from './Menu';
+import Navigation from './Navigation';
 
-function Contacts({ height, location }) {
+function Contacts({ height }) {
   return (
     <section className='contacts'>
-      <Menu height={height} location={location} />
+      <Navigation height={height} />
     </section>
   );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import Menu from './Menu';
+import Navigation from './Navigation';
 
-function Detailing({ height, location }) {
+function Detailing({ height }) {
   return (
     <section className='detailing'>
-      <Menu height={height} location={location} />
+      <Navigation height={height} />
     </section>
   );
 }

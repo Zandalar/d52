@@ -1,20 +1,26 @@
 .mini-menu__link {
   color: #fff;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 22px;
+  line-height: 24px;
   text-decoration: none;
+  transition: all .3s ease-out;
 }
 
 .mini-menu__link:after {
   display: block;
   width: 0;
   height: 2px;
-  background-color: #fff;
+  background-color: red;
   content: "";
-  transition: width 0.2s ease-out;
+  transition: width 0.3s ease-out;
 }
 
 .mini-menu__link:hover:after {
   width: 100%;
+}
+
+.mini-menu__link:hover {
+  color: red;
+  transition: all .3s ease-out;
 }

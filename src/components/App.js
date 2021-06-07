@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Route,
-  Switch,
-  useHistory,
-  useLocation,
-} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import ImagePopup from './ImagePopup';
 import Main from './Main';
 import About from './About';
@@ -16,14 +11,19 @@ import Popup from './Popup';
 
 function App() {
   const [height, setHeight] = useState(0);
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
   const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
   const [isMessagePopupOpen, setIsMessagePopupOpen] = useState(false);
 
-  const location = useLocation().pathname;
-  const history = useHistory();
+  // const location = useLocation().pathname;
+  // const history = useHistory();
 
   function updateHeight() {
     setHeight(window.pageYOffset);
+  }
+
+  function updateWidth() {
+    setWindowWidth(window.innerWidth);
   }
 
   function closeAllPopups() {
@@ -50,20 +50,20 @@ function App() {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      document.addEventListener('scroll', updateHeight);
-    }, 1000);
+    document.addEventListener('scroll', updateHeight);
     window.addEventListener('keydown', handleEscClick);
+    window.addEventListener('resize', updateWidth);
     return () => {
       document.removeEventListener('scroll', updateHeight);
       window.removeEventListener('keydown', handleEscClick);
+      window.removeEventListener('resize', updateWidth);
     };
   });
 
-  useEffect(() => {
-    history.push('/');
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   history.push('/');
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className="app">
@@ -73,6 +73,7 @@ function App() {
            height={height}
            handleCardClick={handleCardClick}
            handleMessagePopupClick={handleMessagePopupClick}
+           windowWidth={windowWidth}
          />
         </Route>
         <Route exact path='/about'>
@@ -82,16 +83,16 @@ function App() {
           />
         </Route>
         <Route exact path='/detailing'>
-          <Detailing height={height} location={location} />
+          <Detailing height={height} />
         </Route>
         <Route exact path='/service'>
-          <Service height={height} location={location} />
+          <Service height={height} />
         </Route>
         <Route exact path='/price'>
-          <Price height={height} location={location} />
+          <Price height={height} />
         </Route>
         <Route exact path='/contacts'>
-          <Contacts height={height} location={location} />
+          <Contacts height={height} />
         </Route>
       </Switch>
       <ImagePopup
