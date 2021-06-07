@@ -1,6 +1,8 @@
 {
-  "extends": "airbnb-base",
-//  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base",
+    "react-app"
+  ],
   "ignorePatterns": ["reportWebVitals.js"],
   "rules": {
     "_id": "off",
