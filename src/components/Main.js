@@ -1,19 +1,14 @@
 import React from 'react';
-import Menu from './Menu';
 import Header from './Header';
 import Activities from './Activities';
 import Gallery from './Gallery';
 import Footer from './Footer';
+import Navigation from './Navigation';
 
-function Main({
-  height,
-  handleCardClick,
-  handleMessagePopupClick,
-  location,
-}) {
+function Main({ height, handleCardClick, handleMessagePopupClick }) {
   return (
     <>
-      <Menu height={height} location={location} />
+      <Navigation height={height} />
       <Header height={height} />
       <Activities />
       <Gallery onCardClick={handleCardClick}/>

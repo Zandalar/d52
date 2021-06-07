@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
-import Menu from './Menu';
 import image from '../images/bg_honda.jpg';
 import Footer from './Footer';
 import Accordion from './Accordion';
+import Navigation from './Navigation';
 
-function About({ height, location, handleMessagePopupClick }) {
+function About({ height, handleMessagePopupClick }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className='about'>
-      <Menu height={height} location={location} />
+      <Navigation height={height} />
       <section className='about__masters'>
         <h1 className='about__title'>Наши герои</h1>
         <ul className='about__masters-container'>

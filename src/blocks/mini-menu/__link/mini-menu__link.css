@@ -1,0 +1,20 @@
+.mini-menu__link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.mini-menu__link:after {
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  transition: width 0.2s ease-out;
+}
+
+.mini-menu__link:hover:after {
+  width: 100%;
+}

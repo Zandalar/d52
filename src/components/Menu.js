@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Menu({ height, location }) {
+function Menu() {
   return (
-    <nav className={height < (document.documentElement.clientHeight - 75) && location === '/' ? 'menu' : 'menu menu_dark'}>
+    <nav className='menu'>
       <div className='menu__container'>
         <h1 className='menu__title'>D<span className='text_red'>52</span></h1>
         <ul className='menu__list'>

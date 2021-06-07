@@ -73,13 +73,11 @@ function App() {
            height={height}
            handleCardClick={handleCardClick}
            handleMessagePopupClick={handleMessagePopupClick}
-           location={location}
          />
         </Route>
         <Route exact path='/about'>
           <About
             height={height}
-            location={location}
             handleMessagePopupClick={handleMessagePopupClick}
           />
         </Route>
