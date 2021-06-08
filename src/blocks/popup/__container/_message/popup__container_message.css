@@ -1,8 +1,12 @@
 .popup__container_message {
-  width: 630px;
+  width: 80%;
+  height: 80%;
+  display: flex;
   background-color: #202020;
   padding: 36px;
   box-shadow: 5px 5px 40px red, -5px -5px 40px darkred;
+  background-image: url(../../../../images/bg_gray.jpg);
+  background-size: contain;
 }
 
 @media all and (max-width: 600px) {

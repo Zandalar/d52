@@ -1,6 +1,6 @@
 .menu__button {
-  width: 54px;
-  height: 54px;
+  width: 32px;
+  height: 32px;
   background-image: url(../../../images/icon__menu.svg);
   background-size: contain;
   background-color: transparent;
@@ -8,9 +8,9 @@
   outline: none;
   cursor: pointer;
   padding: 0;
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  /*position: fixed;*/
+  /*top: 20px;*/
+  /*right: 20px;*/
   transition: opacity .3s ease;
 }
 

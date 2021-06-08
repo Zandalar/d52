@@ -1,9 +1,9 @@
 .popup__field-error {
-  max-width: 358px;
+  width: 100%;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: #ff0000;
+  color: #ffffff;
 }
 
 @media all and (max-width: 600px) {

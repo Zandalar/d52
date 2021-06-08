@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import slide1 from '../images/slider1.jpg';
 import slide2 from '../images/slider2.jpg';
 import slide3 from '../images/slider3.jpg';
@@ -18,14 +18,14 @@ function Slider() {
   const prevImgIndex = activeIndex ? activeIndex - 1 : img.length - 1;
   const nextImgIndex = activeIndex === img.length - 1 ? 0 : activeIndex + 1;
 
-  function changeCurrentIndex() {
+  const changeCurrentIndex = useCallback(() => {
     setActiveIndex((index) => (index === img.length - 1 ? 0 : index + 1));
-  }
+  }, [img.length]);
 
   useEffect(() => {
     setInterval(() => changeCurrentIndex(), 3000);
     return () => clearInterval();
-  }, []);
+  }, [changeCurrentIndex]);
 
   return (
     <div className="slider">
