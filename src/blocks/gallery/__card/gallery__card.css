@@ -12,3 +12,10 @@
   transform: scale(1.1, 1.1);
   transition: all .3s ease-out;
 }
+
+@media all and (max-width: 600px) {
+  .gallery__card {
+    width: 100%;
+    height: 100%;
+  }
+}

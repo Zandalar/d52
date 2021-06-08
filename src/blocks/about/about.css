@@ -10,6 +10,8 @@
 @import url(./__masters-container/about__masters-container.css);
 @import url(./__card/about__card.css);
 @import url(./__name/about__name.css);
+@import url(./__subtitle-container/about__subtitle-container.css);
+@import url(./__quote/about__quote.css);
 
 .about {
   width: 100%;

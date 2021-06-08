@@ -1,0 +1,6 @@
+.about__subtitle-container {
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+  border-bottom: 1px solid darkred;
+}

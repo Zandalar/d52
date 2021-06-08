@@ -1,0 +1,6 @@
+.about__quote {
+  width: 32px;
+  height: 32px;
+  transform: translate(0, -10px);
+  margin-right: 10px;
+}

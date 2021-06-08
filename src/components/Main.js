@@ -3,13 +3,14 @@ import Header from './Header';
 import Activities from './Activities';
 import Gallery from './Gallery';
 import Footer from './Footer';
-import Navigation from './Navigation';
+import Menu from './Menu';
 
 function Main({
   height,
+  windowWidth,
+  location,
   handleCardClick,
   handleMessagePopupClick,
-  windowWidth,
 }) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,7 +18,7 @@ function Main({
 
   return (
     <>
-      <Navigation height={height} windowWidth={windowWidth} />
+      <Menu height={height} windowWidth={windowWidth} location={location} />
       <Header height={height} />
       <Activities />
       <Gallery onCardClick={handleCardClick}/>

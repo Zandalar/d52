@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch, useHistory } from 'react-router-dom';
+import {
+  Route,
+  Switch,
+  useHistory,
+  useLocation,
+} from 'react-router-dom';
 import ImagePopup from './ImagePopup';
 import Main from './Main';
 import About from './About';
@@ -15,7 +20,7 @@ function App() {
   const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
   const [isMessagePopupOpen, setIsMessagePopupOpen] = useState(false);
 
-  // const location = useLocation().pathname;
+  const location = useLocation().pathname;
   const history = useHistory();
 
   function updateHeight() {
@@ -71,29 +76,47 @@ function App() {
         <Route exact path='/'>
          <Main
            height={height}
+           windowWidth={windowWidth}
+           location={location}
            handleCardClick={handleCardClick}
            handleMessagePopupClick={handleMessagePopupClick}
-           windowWidth={windowWidth}
          />
         </Route>
         <Route exact path='/about'>
           <About
             height={height}
-            handleMessagePopupClick={handleMessagePopupClick}
             windowWidth={windowWidth}
+            location={location}
+            handleMessagePopupClick={handleMessagePopupClick}
           />
         </Route>
         <Route exact path='/detailing'>
-          <Detailing height={height} />
+          <Detailing
+            height={height}
+            windowWidth={windowWidth}
+            location={location}
+          />
         </Route>
         <Route exact path='/service'>
-          <Service height={height} />
+          <Service
+            height={height}
+            windowWidth={windowWidth}
+            location={location}
+          />
         </Route>
         <Route exact path='/price'>
-          <Price height={height} />
+          <Price
+            height={height}
+            windowWidth={windowWidth}
+            location={location}
+          />
         </Route>
         <Route exact path='/contacts'>
-          <Contacts height={height} />
+          <Contacts
+            height={height}
+            windowWidth={windowWidth}
+            location={location}
+          />
         </Route>
       </Switch>
       <ImagePopup

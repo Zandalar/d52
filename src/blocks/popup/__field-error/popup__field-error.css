@@ -4,10 +4,7 @@
   font-size: 12px;
   line-height: 15px;
   color: #ffffff;
+  padding-top: 5px;
 }
 
-@media all and (max-width: 600px) {
-  .popup__field-error {
-    max-width: 90%;
-  }
-}
+

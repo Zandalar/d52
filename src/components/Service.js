@@ -1,10 +1,10 @@
 import React from 'react';
-import Navigation from './Navigation';
+import Menu from './Menu';
 
-function Service({ height }) {
+function Service({ height, windowWidth, location }) {
   return (
     <section className='service'>
-      <Navigation height={height} />
+      <Menu height={height} windowWidth={windowWidth} location={location} />
     </section>
   );
 }

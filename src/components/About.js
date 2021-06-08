@@ -1,17 +1,23 @@
 import React, { useEffect } from 'react';
 import image from '../images/bg_honda.jpg';
+import quote from '../images/icon__quotation.svg';
 import Footer from './Footer';
 import Accordion from './Accordion';
-import Navigation from './Navigation';
+import Menu from './Menu';
 
-function About({ height, handleMessagePopupClick, windowWidth }) {
+function About({
+  height,
+  windowWidth,
+  location,
+  handleMessagePopupClick,
+}) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className='about'>
-      <Navigation height={height} windowWidth={windowWidth} />
+      <Menu height={height} windowWidth={windowWidth} location={location} />
       <section className='about__masters'>
         <h1 className='about__title'>Наши герои</h1>
         <ul className='about__masters-container'>
@@ -41,9 +47,12 @@ function About({ height, handleMessagePopupClick, windowWidth }) {
         <div className='about__service-container'>
           <div className='about__description'>
             <h1 className='about__title'>Немного истории</h1>
-            <h2 className='about__subtitle'>"Все началось с чашки кофе...
-              Или как снесли наш автосервис"
-            </h2>
+            <div className='about__subtitle-container'>
+              <img className='about__quote' src={quote} alt='quote icon'/>
+              <h2 className='about__subtitle'>Все началось с чашки кофе...
+                Или как снесли наш автосервис
+              </h2>
+            </div>
             <p className='about__text'>
               D52 Service родился в 2015 году, но к тому времени
               Паша и Витя уже были опытными мастерами своего дела

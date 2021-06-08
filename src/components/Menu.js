@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MiniMenu from './MiniMenu';
 
-function Menu({ windowWidth, height }) {
+function Menu({ windowWidth, height, location }) {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = React.useState(false);
 
   function handleMenuClick() {
@@ -10,7 +10,7 @@ function Menu({ windowWidth, height }) {
   }
 
   return (
-    <nav className={(height > window.innerHeight) ? 'menu menu_dark' : 'menu'}>
+    <nav className={(height > window.innerHeight || location !== '/') ? 'menu menu_dark' : 'menu'}>
       <div className='menu__container'>
         <h1 className='menu__title'>D<span className='text_red'>52</span></h1>
         {(height >= 10 || windowWidth < 1200) && <button className='menu__button' onClick={handleMenuClick} />}

@@ -3,4 +3,11 @@
   height: 100%;
   display: flex;
   object-fit: contain;
+  object-position: center;
+}
+
+@media all and (max-width: 600px) {
+  .activities {
+    padding: 50px 0;
+  }
 }

@@ -9,3 +9,11 @@
   list-style: none;
   padding: 0;
 }
+
+@media all and (max-width: 600px) {
+  .gallery__list {
+    width: 87.5%;
+    grid-template-columns: repeat(auto-fit, max-content);
+    grid-template-rows: repeat(auto-fit, max-content);
+  }
+}
